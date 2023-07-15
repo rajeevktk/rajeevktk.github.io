@@ -1,85 +1,53 @@
-body{
-    background-color:#5fabf3;
+body {
+  background-color:rgb(230, 248, 255);
 }
-
-#menubar{
-    width:100%;
-    margin-left:auto;
-    text-align:center;
-    margin-right:auto;
-    margin-top:130px;
-    height:auto;
-}
-
 ul {
-  	text-transform:uppercase;
-  	text-align: left;
-  	display: inline;
-  	margin: 0;
-  	padding: 15px 4px 17px 0;
-  	list-style: none;
-  	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-  	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-  	box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ff5100;
 }
 
-ul li {
-  	font: bold 12px/18px sans-serif;
-  	display: inline-block;
-  	margin-right: -5px;
-  	position: relative;
-  	padding: 15px 20px;
-  	background: #f7f7f7;
-  	color:#6aa25d;
-  	cursor: pointer;
-  	-webkit-transition: all 0.2s;
-  	-moz-transition: all 0.2s;
-  	-ms-transition: all 0.2s;
-  	-o-transition: all 0.2s;
-  	transition: all 0.2s;
+li {
+  float: left;
 }
 
-ul li:hover {
-  	background: #6aa25d;
-  	color: #f7f7f7;
+li a, .dropbtn {
+  display: inline-block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-/*submenu css starting-------------*/
-li ul{
-	display: none;
-	background-color: #f7f7f7;
-	position: absolute;
-	margin-top: 15px;
-	margin-left: -20px;
-	padding:0px 0px 0px 0px;	
-}
-	
-li ul a li{
-	width:8em;
-	border-bottom: 1px solid #e7e7e7;
-}
-	
-li:hover ul{
-	display: block;
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: rgb(26, 1, 255);
 }
 
-li ul a li:hover{
-	width:8em;
-}
-	
-/*----------------------------------*/
-li ul li ul li{
-	display:none;
-	margin-left: 0px;
-	position:relative;
+li.dropdown {
+  display: inline-block;
 }
 
-li ul li:hover ul li{
-	display:block;			
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
-ul ul ul {
-  	left: 100%;
-  	top: 0;
-	margin-left: 0px;
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #e204f7;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
